@@ -13,10 +13,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
-  app: 'FrontendCourse'
+  app: 'frontend-course'
   env: 'FrontendCourse-env'
   bucket_name: 'elasticbeanstalk-us-east-2-221771364686'
-  bucket_path: 'FrontendCourse'
+  bucket_path: 'frontend-course'
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
