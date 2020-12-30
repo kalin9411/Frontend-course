@@ -6,4 +6,4 @@ before_install:
   - docker build -t kalin/frontend-course -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true kalin/frontend-course npm run test -- --coverage
+  - docker run -e CI=true kalin/frontend-course npm run test
