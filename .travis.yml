@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true kalin/frontend-course:latest npm run test
+
+deploy: 
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "FrontendCourse"
+  env: "FrontendCourse-env"
+  bucket_name: "elasticbeanstalk-us-east-2-221771364686"
+  bucket_path: "FrontendCourse"
+  on: 
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
